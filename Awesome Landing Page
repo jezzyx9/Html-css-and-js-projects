@@ -1,0 +1,481 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="style.css">
+  <title>Awesome Landing Page</title>
+  <style>
+    * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+body {
+    height: 90vh;
+    width: 100vw;
+    background: #f0f0f0;
+    
+}
+
+header .logo {
+    position: relative;
+    display: inline-block;
+}
+
+header .logo h2 {
+    display: inline-block;
+    text-align: left;
+    color: #fff;
+    background: limegreen;
+    font-variant: small-caps;
+    font-size: 50px;
+    text-shadow: 0 3px 10px black;
+    font-family: monospace;
+    border-radius: 3px;
+    padding-right: 4px;
+    
+    
+    
+
+    
+    
+}
+
+nav ul {
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    margin-top: 20px;
+    background: limegreen;
+    padding: 5px;
+    box-shadow: 0 1px 5px rgba(0, 0, 0, 0.2);
+}
+header #btn{
+    width: 65px;
+    height: 35px;
+    position: absolute;
+    top: 5px;
+    right: -120px;
+    background: #fff;
+    border: none;
+    /*border: 1px solid #ddf;*/
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 2px 5px #aaa;
+}
+header #btn:hover{
+    background: #fff;
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    color: #6DF332;
+    box-shadow: 0 4px 30px #6DF332;
+    border: none;
+}
+header #btn2{
+    width: 65px;
+    height: 35px;
+    position: absolute;
+    top: 5px;
+    right: -200px;
+    background: #fff;
+    border: none;
+    /*border: 1px solid #ddf;*/
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 0 5px #aaa;
+}
+header #btn2:hover{
+    background: #fff;
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    color: #7D7E23;
+    box-shadow: 0 4px 30px #FCFF40;
+    border: none;
+}
+
+ .nl li {
+     
+    display: inline-block;
+   padding: 3px;
+   padding-top: 12px;
+    padding-bottom: 12px;
+    
+}
+
+.nl li a {
+    
+    text-decoration: none;
+    font-weight: 550;
+    font-size: 1em;
+    color: #fff;
+    
+}
+
+.hero {
+    position: relative;
+    
+    height: 135px;
+    background: linear-gradient(145deg, #fffaf0, #e6e6fa);
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 3px 30px plum;
+    /*rgba(0, 0, 0, 0.1);*/
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero h1 {
+    color: royalblue;
+    position: absolute;
+    top: 10px;
+    
+}
+
+.hero p {
+
+    position: absolute;
+    color: rgba(113, 113, 113, );
+    font-weight: 550;
+    margin-top: 10px;
+}
+
+.hero a {
+    position: absolute;
+    padding: 10px;
+    background: #ffffff;
+    border: 2px solid #eee;
+    border-radius: 5px;
+    text-decoration: none;
+    bottom: 29px;
+    color: #272747;
+    transition: 0.5s;
+}
+
+.hero a:hover {
+    color: limegreen;
+    background: #fff;
+    box-shadow: 0 0 20px lime;
+    padding: 10px;
+    border: none;
+}
+
+.features {
+    position: relative;
+    margin-top: 
+    height: 135px;
+    background: linear-gradient(140deg, #fffaf0, #E9FAD0);
+    backdrop-filter: blur(12px);
+    box-shadow: 0 3px 30px #888;
+    transition: transform 0.3 ease, box-shadow 0.3 ease;
+    padding: 30px;
+    border-radius: 20px;
+    height: 200px;
+}
+
+.about {
+    background: linear-gradient(145deg, #FFFFFF, #A0F47A);
+    padding: 30px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 30px #000;
+    border-radius: 20px;
+    transition: transform 0.3 ease, box-shadow: 0.3 ease;
+    
+}
+h2 {
+    color: royalblue;
+    margin-bottom: 15px;
+}
+p{
+    font-weight: 500;
+    text-align: justify;
+    margin-bottom: 5px;
+    color: #515151;
+}
+cite{
+    font-weight: bolder;
+    color: #222;
+}
+blockquote{
+    font-weight: 500;
+    text-align: justify;
+    margin-bottom: 5px;
+    color: #515151;
+}
+
+
+.testimonials {
+    background: linear-gradient(145deg, #FFFFFF, #A0F47A);
+    padding: 30px;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 30px #000;
+    border-radius: 20px;
+    transition: transform 0.3 ease,
+        box-shadow: 0.3 ease;
+}
+
+.pricing{
+    position: relative;
+    background: linear-gradient(145deg, #FFFFFF, #A0F47A);
+padding: 30px;
+backdrop-filter: blur(14px);
+box-shadow: 0 4px 30px #000;
+border-radius: 20px;
+transition: transform 0.3 ease,
+box-shadow: 0.3 ease;
+}
+
+.contact {
+    width: 96vw;
+    height: 460px;
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+    padding: 30px;
+    background: #FFFFFF;
+    /*rgb(0, 0, 0, 0.1);*/
+padding: 30px;
+backdrop-filter: blur(2px);
+box-shadow: 0 0 30px #000;
+border-radius: 10px;
+transition: transform 0.3 ease,
+box-shadow: 0.3 ease;
+left: 7px;
+}
+
+.contact h2 {
+    font-size: 2em;
+    position: absolute;
+    top: 20px;
+    left: 100px;
+    color: lime;
+}
+
+#name, #email {
+    width: 320px;
+    height: 45px;
+    border-radius: 6px;
+    border: none;
+    margin: 4px;
+    border: 1px solid #7E817E;
+    background-color: #F9f9f9;
+}
+#name::placeholder {
+    position: relative;
+    left: 10px;
+    font-size: 15px;
+}
+#email::placeholder{
+    position: relative;
+    left: 10px;
+    font-size: 16px;
+}
+#message::placeholder {
+    position: relative;
+    font-size: 19px;
+    top: 8px;
+    left: 10px;
+}
+button[type="submit"]{
+    width: 120px;
+    height: 40px;
+    position: relative;
+    top: 3px;
+   right: -40px;
+    color: #fff;
+    border: none;
+    /*border: 1px solid #ddf;*/
+    font-weight: 600;
+    transition: 0.3s;
+    box-shadow: 0 0 2px ##9EFF6F;
+    font-size: 15px;
+    background:  #6DF332;
+}
+header #btn:hover{
+    background: #fff;
+    backdrop-filter: blur(12px);
+    border-radius: 20px;
+    color: #6DF332;
+    box-shadow: 0 4px 30px #6DF332;
+    border: none;
+}
+
+
+footer p{
+    margin-top: 10px;
+    color: #fff;
+    background: limegreen;
+    text-align: center;
+    padding: 15px;
+}
+.planA{
+    margin-right: 35px;
+    left: 0;
+    display: inline-block;
+    list-style: none;
+    padding: 10px;
+    background: #44FF247A;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 10px #2e2e2e;
+    border-radius: 6px;
+    color: #1e1e1e;
+    font-weight: 580;
+    
+}
+.planA ul li{
+    list-style: none;
+}
+.planA a{
+    text-decoration: none;
+    animation-name: pa;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+    @keyframes pa{
+        from{color: black;}
+        to{ color: #ff0000;}
+    }
+.planB{
+    position: absolute;
+    display: inline-block;
+    list-style: none;
+    
+    background: #44FF247A;
+    backdrop-filter: blur(14px);
+    box-shadow: 0 4px 10px #3e3e3e;
+    border-radius: 6px;
+    color: #1e1e1e;
+    font-weight: 580;
+    padding: 10px;
+}
+.planB ul li{
+    list-style: none;
+}
+.planB a{
+    text-decoration: none;
+    animation-name: pa;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+    @keyframes pa{
+        from{color: black;}
+        to{ color: #ff0000;}
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🔵 Navigation -->
+  <header>
+    <nav>
+      <div class="logo">
+      <h2>Real X9</h2>
+
+      <input type="button" value="Sign-up" id="btn">
+      <input type="button" value="Log in" id="btn2">
+      </div>
+      <ul class="nl">
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#features">Features</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Testimonials</a></li>
+        <li><a href="#pricing">Pricing</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- 🟢 Hero Section -->
+  <section class="hero">
+    <h1>Welcome to Our Amazing Product</h1>
+    <p>The best solution for your business or personal website.</p>
+    <a href="#r" class="cta-button">Get Started</a>
+  </section>
+
+  <!-- 🟡 Features Section -->
+  <section class="features">
+    <h2>Features</h2>
+    <div class="feature">
+      <h3>Fast Performance:</h3>
+      <p>Lightning fast load time and smooth interaction.</p>
+    </div>
+    <div class="feature">
+      <h3>Responsive Design:</h3>
+      <p>Perfectly fits all screens — mobile, tablet, desktop.</p>
+    </div>
+    <div class="feature">
+      <h3>Secure & Reliable:</h3>
+      <p>We use top security practices to keep your data safe.</p>
+    </div>
+  </section>
+
+  <!-- 🟣 About Section -->
+  <section class="about">
+    <h2>About Us</h2>
+    <p>We are a passionate team of developers, designers, and marketers with years of experience building quality products that people love to use.</p>
+  </section>
+
+  <!-- 🔴 Testimonials Section -->
+  <section class="testimonials">
+    <h2>What Our Users Say</h2>
+    <blockquote>
+      "This is hands down the best tool I’ve ever used. Amazing!"
+      <cite>— John Doe</cite>
+    </blockquote>
+    <blockquote>
+      "I can't imagine going back to life before this product."
+      <cite>— Jane Smith</cite>
+    </blockquote>
+  </section>
+
+  <!-- 🟤 Pricing Section -->
+  <section class="pricing">
+    <h2>Choose a Plan</h2>
+    <div class="planA">
+      <h3>Free</h3>
+      <p>$0/month</p>
+      <ul>
+        <li>Basic Features</li>
+        <li>Email Support</li>
+        <li>Limited Access</li>
+      </ul>
+      <a href="#" class="cta-button">Try Free</a>
+    </div>
+    <div class="planB">
+      <h3>Pro</h3>
+      <p><del>$99</del> $29/month</p>
+      <ul>
+        <li>All Features</li>
+        <li>Priority Support</li>
+        <li>Unlimited Access</li>
+      </ul>
+      <a href="#" class="cta-button">Buy Now</a>
+    </div>
+  </section>
+
+  <!-- 🔵 Contact Section -->
+  <section class="contact">
+    <h2 class="con">Contact Us</h2>
+    <form>
+      <input type="text" id="name" name="name" placeholder="Enter your name" required>
+ <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+      <textarea id="message" name="message" rows="12" cols="40" placeholder="Write a message" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+  </section>
+
+  <!-- ⚫ Footer -->
+  <footer>
+    <p>&copy; 2025 BrandName. All rights reserved.</p>
+  </footer>
+
+</body>
+</html>
+
