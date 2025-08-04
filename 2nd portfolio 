@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <title>Document</title>
+  <style>
+   * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+    
+    body {
+      background: ;
+      
+    }
+    
+    a {
+      color: #fff;
+      text-decoration: none;
+    }
+    
+    .nav-bar {
+      position: fixed;
+      left: 0;
+      top: 0;
+      padding: 25px 9%;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      z-index: 100;
+      visibility: hidden;
+      opacity: 0;
+      animation: show-nav 1.5s linear forwards;
+      animation-delay: 1.2s;
+      
+    }
+    
+    @keyframes show-nav {
+      100% {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    
+    .nav-bar .logo {
+      font-size: 60px;
+      font-weight: 700;
+    }
+    
+    #logo {
+      color: #7cf03d;
+    }
+    
+    .nav-bar ul {
+      display: flex;
+    }
+    
+    .nav-bar ul li {
+      list-style: none;
+      margin-left: 35px;
+    }
+    
+    .nav-bar ul li a {
+      font-size: 20px;
+      font-weight: 700;
+    }
+    
+    .nav-bar ul li:hover a,
+    .nav-bar ul li.active a {
+      color: #7cf03d;
+    }
+    
+    .home {
+      display: flex;
+      align-content: center;
+      height: 100vh;
+      padding: 160px 9% 0;
+      gap: 50px;
+      color: #fff;
+      visibility: hidden;
+      opacity: 0;
+      animation: show-home 1.5s linear forwards;
+      animation-delay: 1.6s;
+      
+    }
+    
+    @keyframes show-home {
+      100% {
+        visibility: visible;
+        opacity: 1;
+      }
+    }
+    
+    .home-info h1 {
+      font-size: 55px;
+    }
+    
+    .home-info h2 {
+     position:relative
+      display: inline-block;
+      font-size: 32px;
+      margin-top: -10px;
+      
+    }
+    
+    .home-info h2 span{
+      position: relative;
+      display: inline-block;
+      color: transparent;
+      -webkit-text-stroke: .7px #7cf03d;
+     animation: display-text 16s linear infinite;
+     animation-delay: calc(-4s * var(--i));
+    }
+    
+    @keyframes display-text {
+
+      25%,
+      100% {
+        display: none;
+      }
+    }
+    
+    .home-info h2 span::before {
+      content: attr(data-text);
+      position: absolute;
+      width: 0;
+      border-right: 2px solid #7cf03d;
+      color: #7cf03d;
+      
+      white-space: nowrap;
+      overflow: hidden;
+    animation: fill-text 4s linear infinite;
+    }
+    @keyframes fill-text{
+      10%,100%{
+        width: 0;
+      }
+      70%,90%{
+        width: 100%;
+        
+      }
+    }
+    
+    
+    .home-info p {
+      font-size: 16px;
+      margin: 10px 0 25px;
+    }
+    
+    .btn {
+      padding: 10px 30px;
+      background: #7cf03d;
+      border-radius: 40px;
+      border: 2px solid #7cf03d;
+      box-shadow: 0 0 10px #7cf03d;
+      color: #000;
+      font-weight: 600;
+      transition: 0.5s;
+    }
+    
+    .btn:hover {
+      background: transparent;
+      color: #fff;
+      backdrop-filter: blur(14px);
+      box-shadow: 0 0 10px #7cf03d;
+    }
+    
+    .home-info .social-icons {
+      margin-left: 35px;
+    }
+    
+    .home-info .social-icons a i {
+      display: inline-flex;
+      padding: 8px;
+      border: 1px solid #7cf03d;
+      border-radius: 50%;
+      color: #7cf03d;
+      margin: 0 8px;
+      transition: 0.5s;
+    }
+    
+    .home-info .social-icons a i:hover {
+      box-shadow: 0 0px 10px red;
+      color: #fff;
+      
+    }
+    
+    .home-img .img-box {
+      position: relative;
+      border-radius: 50%;
+      width: 32vw;
+      height: 32vw;
+      padding: 5px;
+    /*  border: .1px solid red;*/
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+    }
+    
+    .home-img .img-box::before,
+    .home-img .img-box::after {
+      content: '';
+      position: absolute;
+      width: 500px;
+      height: 500px;
+      background: conic-gradient(transparent, transparent, transparent, #7cf03d);
+      transform: rotate(0deg);
+      animation: rotate-border 10s linear infinite;
+    }
+    
+    .home-img .img-box::after{
+      animation-delay: -5s;
+    }
+    @keyframes rotate-border{
+      100%{
+        transform: rotate(360deg);
+      }
+    }
+    
+    .home-img .img-box .img-items {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      background: #1e2724;
+      border-radius: 50%;
+      display: flex;
+      justify-content: center;
+      overflow: hidden;
+      z-index: 1;
+    }
+    
+    .home-img .img-box .img-items img {
+      position: absolute;
+      width: 90%;
+      top: 15px;
+      /*top: 30px;*/
+      display: block;
+      object-fit: cover;
+      border-radius: 50%;
+      mix-blend-mode: lighten;
+     
+    }
+    
+    .animation-bars {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      display: flex;
+      
+      z-index: -1;
+    }
+    
+    .animation-bars .bar {
+      width: 100%;
+      height: 100%;
+      background: #1e2724;
+      /*border: 2px solid lime;*/
+      transform: translateY(-100%);
+      animation: show-bars .5s ease-out forwards;
+      animation-delay: calc(.1s * var(--i));
+    }
+    
+    @keyframes show-bars {
+      100% {
+        transform: translateY(0%);
+      }
+    }
+  </style>
+</head>
+
+<body>
+  <nav class="nav-bar">
+    <a href="#" class="logo">Port<span id="logo">folio.</span></a>
+    <ul>
+      <li class="active"><a href="#">Home</a></li>
+      <li><a href="#">About</a></li>
+      <li><a href="#">Service</a></li>
+      <li><a href="# ">Portfolio</a></li>
+      <li><a href="# ">Contact</a></li>
+    </ul>
+  </nav>
+  <div class="animation-bars">
+    <div class="bar" style="--i:6;"></div>
+    <div class="bar" style="--i:5;"></div>
+    <div class="bar" style="--i:4;"></div>
+    <div class="bar" style="--i:3;"></div>
+    <div class="bar" style="--i:2:"></div>
+    <div class="bar" style="--i:1;"></div>
+  </div>
+  <section class="home">
+    <div class="home-info">
+      <h1>Zubair Ahmed</h1>
+      <h2>I'm a <span style="--i:3;" data-text="coder">coder</span>
+  <span style="--i:2;" data-text="Gamer">Gamer</span>
+        <span style="--i:1;" data-text="haccr">haccr</span>
+      </h2>
+      <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Alias, numquam, ipsa. Ad iure nesciunt incidunt reiciendis magni quaerat adipisci, ipsum rem sunt vero maxime placeat, perspiciatis minima repellendus. Doloribus, laboriosam!</p>
+      <div class="social-icons">
+        <a href="#" class="btn">Download CV</a>
+        <a href="#"><i class="fa-brands fa-linkedin"></i></a>
+        <a href="#"><i class="fa-brands fa-github"></i></a>
+        <a href="#"><i class="fa-brands fa-instagram"></i></a>
+      </div>
+    </div>
+    <div class="home-img">
+      <div class="img-box">
+        <div class="img-items">
+          <img src="dp.jpg" alt="" >
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  
+</body>
+
+</html>
